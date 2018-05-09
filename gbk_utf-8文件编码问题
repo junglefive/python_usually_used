@@ -1,0 +1,21 @@
+#coding=utf-8
+import chardet
+import json
+file_name = "json_setting.json"
+coding = "gbk"
+with open(file_name,"rb") as f:
+    coding = chardet.detect(f.read())["encoding"]
+    print("coding:",coding)
+    if coding !="utf-8" and coding !="utf-8-sig":
+          coding = "gbk"
+    print("coding:",coding)
+try:
+    myfile = open(file_name,"r",encoding=coding)
+    result = json.load(myfile)
+    if myfile:
+       myfile.close()
+    print(result)
+    print(type(result))
+except Exception as e:
+    print(str(e))
+
