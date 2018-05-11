@@ -1,6 +1,6 @@
 import os,sys
 
-#十进制转十六进制
+#十进制转十六进制字符
 def jfive_hex(i):
 
     return "0x"+"{:02x}".format(i)
@@ -9,7 +9,7 @@ def jfive_hex32(i):
 
     return "0x"+"{:04x}".format(i)
     
-#获取时间戳
+#获取时间戳字符串
 #import datatime
 def jfive_get_timestamp():
 
